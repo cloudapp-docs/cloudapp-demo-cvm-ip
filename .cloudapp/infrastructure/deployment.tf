@@ -56,5 +56,10 @@ fi
 # 输出 .config 文件
 echo "cloudappId=${var.cloudapp_id}" >>  $directory/.config
 echo "cloudappName=${var.cloudapp_name}" >>  $directory/.config
+
+# 执行启动脚本
+if [ -f "/usr/local/cloudapp/startup.sh" ]; then
+  sh /usr/local/cloudapp/startup.sh
+fi
     EOT
 }
