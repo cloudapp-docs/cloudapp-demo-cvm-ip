@@ -38,7 +38,7 @@ resource "tencentcloud_instance" "demo_cvm" {
   subnet_id = var.app_target.subnet.id
 
   # 安全组ID列表
-  security_groups = var.sg.security_groups
+  security_groups = [var.sg.security_group.id]
 
   # CVM 密码（由上方 random_password 随机密码生成）
   password = random_password.cvm_password.result

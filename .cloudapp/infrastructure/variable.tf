@@ -77,7 +77,6 @@ variable "sg" {
     security_group = object({
       id = string
     })
-    security_groups = list(string)
   })
 }
 
